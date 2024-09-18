@@ -1,11 +1,105 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="./output.css" rel="stylesheet" />
+    <title>Hashir Ayaz's Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
-    <h1 class="text-3xl font-bold underline bg-red-500">Hello world!</h1>
+
+  <body class="font-sans bg-gray-100">
+    <!-- Navbar -->
+    <nav
+      class="flex items-center justify-between py-2 bg-white shadow-md px-52"
+    >
+      <div class="flex items-center">
+        <span class="text-lg font-bold text-yellow-500">Hashir Ayaz</span>
+      </div>
+      <ul class="flex space-x-6">
+        <li><a href="#" class="text-gray-700 hover:text-gray-900">Home</a></li>
+        <li>
+          <a href="#" class="text-gray-700 hover:text-gray-900">Projects</a>
+        </li>
+        <li>
+          <a href="#" class="text-gray-700 hover:text-gray-900">Contact</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      class="flex flex-col items-center justify-between w-3/4 p-5 mx-auto mt-10 space-y-5 md:flex-row max-w-7xl md:space-y-0 md:space-x-10"
+    >
+      <!-- Text Section -->
+      <div
+        class="w-2/3 p-10 rounded-lg shadow-lg bg-gradient-to-r from-yellow-100 to-blue-100"
+      >
+        <h1 class="text-4xl font-bold text-gray-800">
+          Hello, I’m Hashir, a product Designer With 7 years of experience.
+        </h1>
+        <p class="mt-4 text-lg text-gray-600">
+          I care a lot about using design for positive impact and enjoy creating
+          user-centric, delightful, and human experiences.
+        </p>
+        <button class="px-6 py-2 mt-6 text-white bg-black rounded-lg">
+          Contact me
+        </button>
+        <!-- Social Icons -->
+        <div class="flex mt-5 space-x-4">
+          <a href="#" class="text-gray-700 hover:text-gray-900">🌐</a>
+          <a href="#" class="text-gray-700 hover:text-gray-900">📸</a>
+          <a href="#" class="text-gray-700 hover:text-gray-900">🐦</a>
+          <a href="#" class="text-gray-700 hover:text-gray-900">🔗</a>
+        </div>
+      </div>
+
+      <!-- Image Section -->
+      <div class="w-1/3 bg-red-500">
+        <img
+          src="../assets/hashir.jpg"
+          alt="Abo's picture"
+          class="rounded-lg shadow-lg h-96"
+        />
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section
+      class="grid w-3/4 grid-cols-1 gap-10 p-5 mx-auto mt-10 md:grid-cols-2 max-w-7xl"
+    >
+      <!-- Project 1 -->
+      <div
+        class="flex flex-col justify-between p-6 text-white bg-purple-600 rounded-lg shadow-lg"
+      >
+        <div>
+          <h2 class="text-2xl font-bold">Flop App</h2>
+          <p class="mt-2">Social media for poker players</p>
+        </div>
+        <div class="flex justify-end">
+          <a
+            href="#"
+            class="p-2 text-purple-600 bg-white rounded-full hover:bg-gray-200"
+            >→</a
+          >
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div
+        class="flex flex-col justify-between p-6 text-white bg-gray-800 rounded-lg shadow-lg"
+      >
+        <div>
+          <h2 class="text-2xl font-bold">Lendscape</h2>
+          <p class="mt-2">Lend and Borrow Dashboard</p>
+        </div>
+        <div class="flex justify-end">
+          <a
+            href="#"
+            class="p-2 text-gray-800 bg-white rounded-full hover:bg-gray-200"
+            >→</a
+          >
+        </div>
+      </div>
+    </section>
   </body>
 </html>
