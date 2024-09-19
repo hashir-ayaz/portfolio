@@ -3,53 +3,143 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Contact Me</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+      @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
 
       body {
-        font-family: 'Raleway', sans-serif;
+        font-family: "Raleway", sans-serif;
+      }
+
+      /* Hide checkbox (the toggle) */
+      #menu-toggle {
+        display: none;
+      }
+
+      /* Hamburger icon transforms when checked */
+      #menu-toggle:checked + #menu-btn div {
+        transform: rotate(45deg);
+      }
+
+      #menu-toggle:checked + #menu-btn div:before {
+        transform: rotate(90deg) translate(5px, 0px);
+      }
+
+      #menu-toggle:checked + #menu-btn div:after {
+        transform: rotate(90deg) translate(-5px, 0px);
+      }
+
+      /* Show mobile menu when checked */
+      #menu-toggle:checked ~ #menu {
+        display: block;
       }
     </style>
   </head>
   <body>
-    <nav
-      class="flex items-center justify-between py-2 bg-white shadow-md px-52"
-    >
-      <div class="flex items-center">
-        <a href="./index.html"
-          ><span class="text-lg font-bold text-yellow-500">Hashir Ayaz</span></a
-        >
+    <nav class="relative bg-white shadow-md">
+      <div
+        class="flex items-center justify-between px-5 py-2 md:px-20 lg:px-52"
+      >
+        <div class="flex items-center">
+          <a href="./index.html">
+            <span class="text-lg font-bold text-yellow-500">Hashir Ayaz</span>
+          </a>
+        </div>
+
+        <!-- Navigation Links for Larger Screens -->
+        <ul class="hidden space-x-3 text-xs md:flex">
+          <li>
+            <a href="./index.html" class="text-gray-700 hover:text-gray-900"
+              >Personal Profile</a
+            >
+          </li>
+          <li>
+            <a
+              href="./GalleryPage.html"
+              class="text-gray-700 hover:text-gray-900"
+              >Gallery Page</a
+            >
+          </li>
+          <li>
+            <a
+              href="./CareerGoals.html"
+              class="text-gray-700 hover:text-gray-900"
+              >Career Goals</a
+            >
+          </li>
+          <li>
+            <a href="./Projects.html" class="text-gray-700 hover:text-gray-900"
+              >Projects</a
+            >
+          </li>
+          <li>
+            <a href="./Skills.html" class="text-gray-700 hover:text-gray-900"
+              >Skills and Interests</a
+            >
+          </li>
+          <li>
+            <a href="./contactus.html" class="text-gray-700 hover:text-gray-900"
+              >Contact Me</a
+            >
+          </li>
+        </ul>
       </div>
-      <ul class="flex space-x-3 text-xs">
-        <li>
-          <a href="./index.html" class="text-gray-700 hover:text-gray-900"
+
+      <!-- Hamburger Icon for Mobile -->
+      <input type="checkbox" id="menu-toggle" />
+      <label
+        for="menu-toggle"
+        id="menu-btn"
+        class="absolute block cursor-pointer md:hidden top-4 right-5"
+      >
+        <div class="w-6 h-0.5 bg-gray-700 relative">
+          <span
+            class="block w-6 h-0.5 bg-gray-700 absolute left-0 -top-2"
+          ></span>
+          <span
+            class="block w-6 h-0.5 bg-gray-700 absolute left-0 top-2"
+          ></span>
+        </div>
+      </label>
+
+      <!-- Mobile Menu (Hidden by Default) -->
+      <ul id="menu" class="hidden text-center bg-white shadow-md md:hidden">
+        <li class="py-2">
+          <a href="./index.html" class="block text-gray-700 hover:bg-gray-200"
             >Personal Profile</a
           >
         </li>
-        <li>
-          <a href="./GalleryPage.html" class="text-gray-700 hover:text-gray-900"
+        <li class="py-2">
+          <a
+            href="./GalleryPage.html"
+            class="block text-gray-700 hover:bg-gray-200"
             >Gallery Page</a
           >
         </li>
-        <li>
-          <a href="./CareerGoals.html" class="text-gray-700 hover:text-gray-900"
+        <li class="py-2">
+          <a
+            href="./CareerGoals.html"
+            class="block text-gray-700 hover:bg-gray-200"
             >Career Goals</a
           >
         </li>
-        <li>
-          <a href="./Projects.html" class="text-gray-700 hover:text-gray-900"
+        <li class="py-2">
+          <a
+            href="./Projects.html"
+            class="block text-gray-700 hover:bg-gray-200"
             >Projects</a
           >
         </li>
-        <li>
-          <a href="./Skills.html" class="text-gray-700 hover:text-gray-900"
+        <li class="py-2">
+          <a href="./Skills.html" class="block text-gray-700 hover:bg-gray-200"
             >Skills and Interests</a
           >
         </li>
-        <li>
-          <a href="./contactus.html" class="text-gray-700 hover:text-gray-900"
+        <li class="py-2">
+          <a
+            href="./contactus.html"
+            class="block text-gray-700 hover:bg-gray-200"
             >Contact Me</a
           >
         </li>
